@@ -28,3 +28,6 @@ class BasePage:
     def switch_to_new_window(self):
         self.driver.switch_to.window(self.driver.window_handles[1])
 
+    def open_page(self, url):
+        self.driver.get(url)
+

@@ -13,8 +13,8 @@ class TestAccordion:
 
     def test_accordion(self, driver, heading, panel, expected_text):
 
-        driver.get(home_page_url)
         home_page = HomePage(driver)
+        home_page.open_page(home_page_url)
         home_page.wait_for_load_home_page()
         home_page.scroll_to_accordion()
 

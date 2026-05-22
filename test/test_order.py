@@ -11,9 +11,9 @@ class TestOrder:
     @pytest.mark.parametrize("button_type, name, surname, address, phone", OrderData.DATA_SET)
 
     def test_scooter_order_flow(self, driver, button_type, name, surname, address, phone):
-        driver.get(home_page_url)
         home_page = HomePage(driver)
         order_page = OrderPage(driver)
+        home_page.open_page(home_page_url)
         
         home_page.wait_for_load_home_page()
         
